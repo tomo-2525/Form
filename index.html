@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <title>応募フォーム</title>
 
-    <script src="jquery-3.4.1.js"></script>
+    <script src="js/jquery-3.4.1.js"></script>
     <script>
         $(function () {
 
             $("form").submit(function () {
-                var checkSubmit = false;
+                var checkSubmit = true;
 
                 if ($("#uname").val() == "") {
                     checkSubmit = false;
