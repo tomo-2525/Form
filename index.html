@@ -4,11 +4,34 @@
     <meta charset="utf-8">
     <title>応募フォーム</title>
 
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+
+            $("form").submit(function () {
+                var checkSubmit = true;
+
+                if ($("#uname").val() == "") {
+                    checkSubmit = false;
+                }
+
+                if ($(":radio:checked").length == 0) {
+                    checkSubmit = false;
+                }
+
+                return checkSubmit;
+            });
+        });
+    </script>
+    <!-- <script src="js/main.js"></script> -->
 </head>
 
 <body>
     <form>
-        名前を入力してください。（必須）<br>
+        名前を入力してください。（必須1）<br>
+        <input type="text" name="uname" id="uname">
+        <br><br>
+        性別を入力してください。（必須2）<br>
         <input type="radio" name="usex" value="M">男性
         <input type="radio" name="usex" value="F">女性
 
@@ -25,7 +48,5 @@
         <input type="submit" value="登録する">
     </form>
 </body>
-<script src="jquery-3.4.1.js"></script>
-<script src="js/main.js"></script>
 
 </html>
