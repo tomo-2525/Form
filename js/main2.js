@@ -24,11 +24,19 @@ $(function () {
     $("#gword").val(placeholderText);
 
     $("#gword").focus(function () {
+        if ($("#gword").val() == placeholderText) {
+            $("#gword").removeClass("placeholder");
+            $("#gword").val("");
+        }
+    });
+
+    $("#gword").focus(function () {
         if ($("#gword").val() == "") {
             $("#gword").addClass("placeholder");
             $("#gword").val(placeholderText);
         }
     });
+
 
 
 });
