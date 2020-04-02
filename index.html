@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>応募フォーム</title>
-
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/main.js"></script>
     <!-- <script>
@@ -15,11 +15,9 @@
                 if ($("#uname").val() == "") {
                     checkSubmit = false;
                 }
-
                 if ($(":radio:checked").length == 0) {
                     checkSubmit = false;
                 }
-
                 return checkSubmit;
             });
         });
@@ -30,20 +28,24 @@
     <form>
         名前を入力してください。（必須1）<br>
         <input type="text" name="uname" id="uname">
+        <span class="alert"></span>
         <br><br>
         性別を入力してください。（必須2）<br>
         <input type="radio" name="usex" value="M">男性
         <input type="radio" name="usex" value="F">女性
-
+        <span class="alert"></span>
         <br><br>
         メールアドレスを入力してください。<br>
         <input type="text" name="umail" size="50" id="umail">
+        <span class="alert"></span>
         <br><br>
         郵便局を入力してください。(例：012-3456)<br>
         <input type="text" name="uzip" id="uzip">
+        <span class="alert"></span>
         <br><br>
         住所を入力してください（100字まで）<br>
         <textarea type="text" name="uaddress" cols="50" rows="3"></textarea>
+        <span class="alert"></span>
         <br><br>
         <input type="submit" value="登録する">
     </form>
