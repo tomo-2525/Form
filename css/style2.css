@@ -1,0 +1,12 @@
+.error{
+    background-color: #FFC;
+}
+
+.alert{
+    color: #F00;
+    font-size: small;
+}
+
+.placeholder{
+    color: #CCC;
+}
