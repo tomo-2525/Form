@@ -36,7 +36,4 @@ $(function () {
             $("#gword").val(placeholderText);
         }
     });
-
-
-
 });
