@@ -30,7 +30,7 @@ $(function () {
         }
     });
 
-    $("#gword").focus(function () {
+    $("#gword").blur(function () {
         if ($("#gword").val() == "") {
             $("#gword").addClass("placeholder");
             $("#gword").val(placeholderText);
